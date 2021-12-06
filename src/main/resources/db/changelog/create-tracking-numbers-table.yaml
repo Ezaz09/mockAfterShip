@@ -1,0 +1,48 @@
+databaseChangeLog:
+  - logicalFilePath: db.changelog/create-tracking-numbers-table.yaml
+  - changeSet:
+      id: 1
+      author: master
+      changes:
+        - createTable:
+           tableName: tracking_numbers
+           columns:
+             - column:
+                 name: id
+                 type: int (11)
+                 autoIncrement: true
+                 constraints:
+                   primaryKey: true
+                   nullable: false
+             - column:
+                 name: slug
+                 type: text
+                 constraints:
+                   nullable: false
+             - column:
+                 name: tracking_number
+                 type: text
+                 constraints:
+                   nullable: false
+             - column:
+                 name: after_ship_id
+                 type: text
+                 constraints:
+                   nullable: false
+             - column:
+                 name: status
+                 type: text
+                 constraints:
+                   nullable: false
+             - column:
+                 name: status_date
+                 type: datetime
+                 constraints:
+                   nullable: false
+             - column:
+                 name: fake_api_key
+                 type: text
+                 constraints:
+                   nullable: false
+
+
