@@ -5,17 +5,15 @@ import com.mockAfterShip.mockAfterShip.responseentites.mocktrackingnumber.Tracki
 import com.mockAfterShip.mockAfterShip.responseentites.mocktrackingnumber.TrackingNumberResponse;
 import com.mockAfterShip.mockAfterShip.service.TrackingNumberService;
 import lombok.RequiredArgsConstructor;
-import org.apache.coyote.Response;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/trackings")
+@RequestMapping("/trackings")
 @RequiredArgsConstructor
 public class TrackingNumbersResource {
     private final TrackingNumberService trackingNumberService;
